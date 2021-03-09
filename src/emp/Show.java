@@ -61,11 +61,9 @@ public class Show extends HttpServlet {
 					b.setPhone(rs.getString(6));
 					
 					al.add(b);
-					//System.out.println(al);
+					
 				}
-				
-			//	con.close();
-		}
+					}
 		catch(Exception e)
 		{
 			System.out.println(e);

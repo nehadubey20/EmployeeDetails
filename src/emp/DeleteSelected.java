@@ -42,7 +42,6 @@ public class DeleteSelected extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("user_id"));
 		
 		ConnectorForEmp.delete(id);
-		
 		response.sendRedirect("ShowUpdatedList");
 		
 	}
