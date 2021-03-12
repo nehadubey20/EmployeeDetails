@@ -49,7 +49,23 @@ public class SignUp extends HttpServlet {
 		b.setEmail(request.getParameter("email"));
 		b.setPhone(request.getParameter("phone"));
 		b.setPassword(request.getParameter("password"));
-	
+		b.setGender(request.getParameter("gender"));
+		
+		int selectedItem;
+		if(request.getParameter("city")!=null)
+		{
+		   selectedItem=Integer.parseInt(request.getParameter("city"));
+		}
+		b.setCity(request.getParameter("city"));
+		
+		String s=",";
+        String device[]=request.getParameterValues("device[]");
+        
+        for(int i=0;i<device.length;i++){
+            s+=device[i]+" ";
+        }
+        b.setDevice(request.getParameter("device[]"));
+
 		//Connector.insert(b);
 		if(Connector.insert(b)==true)
 		{

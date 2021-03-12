@@ -71,6 +71,8 @@ public class UpdateSignUp extends HttpServlet {
 		String email =  request.getParameter("email");
 		String phone =  request.getParameter("phone");
 		String password =  request.getParameter("password");
+		String gender = request.getParameter("gender");
+		String city = request.getParameter("city");
 		
 		bs1.setId(sid);
 		bs1.setFname(fname);
@@ -78,6 +80,8 @@ public class UpdateSignUp extends HttpServlet {
 		bs1.setEmail(email);
 		bs1.setPhone(phone);
 		bs1.setPassword(password);
+		bs1.setGender(gender);
+		bs1.setCity(city);
 	
 		
 		ConnectorForEmp.update(bs1);

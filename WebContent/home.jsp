@@ -37,6 +37,11 @@
 		<button><a href="ShowEmp.jsp">Show Data</a></button>&nbsp;
 		<button><a href="signup.jsp">Sign Up</a></button>&nbsp;
 	
+		<h1>Sign Up Details</h1>
+		<button><a href="signup.jsp">Insert Data</a></button>&nbsp;
+		<button><a href="ShowUpdatedList">Show Data</a></button>&nbsp;
+	
+
 	</div>
 </table>
 

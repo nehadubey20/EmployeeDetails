@@ -7,6 +7,30 @@ public class SignUpBean {
 	String email;
 	String phone;
 	String password;
+	String gender;
+	String city;
+	String device; 
+	
+	
+	
+	public String getDevice() {
+		return device;
+	}
+	public void setDevice(String device) {
+		this.device = device;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
 	
 	public int getId() {
 		return id;

@@ -16,7 +16,7 @@
 .emp-form
 {
 	margin: 1%;
-	padding: 2%;
+	padding: 1%;
 }
 
 .emp-form form
@@ -41,14 +41,19 @@
 	border: groove;
 
 }
-
+.emp-form radio
+{
+	display:flex;
+	flex-direction: row;
+	padding:2%;
+}
 .emp-form button
 {
 	border-width: 8px;
 	border: solid;
 	font-size: large;
-	height: 40px;
-	width:40%;
+	height: 30px;
+	width:30%;
 }
 </style>
 
@@ -73,12 +78,21 @@
 				<input type="tel" name="phone" value="<%=sb.getPhone() %>" /><br>
 				<h3>Password:</h3>
 				<input type="text" name="password" value="<%=sb.getPassword() %>"/><br>
-				<button type="submit">Update</button><br>
-				<button type="reset">Reset</button>
 				
+				<div class="radio">
+				<h4>Select Gender</h4>
+				<% String str= sb.getGender(); %>
+				<input type="radio" value="Male" <%=str.equals("Male")?"checked":"" %> name="gender" >Male
+				<input type="radio" value="Female" <%=str.equals("Female")?"checked":"" %> name="gender" >Female</br>
+				</br>
+				<h4>Your city:</h4>
+				<input type="text" value="<%=sb.getCity()%>" name="city"/><br>
+				
+				<button type="submit">Update</button>
+				<button type="reset">Reset</button>
+				</div>	
 			</form>
+			
 		</div>
-
-
 </body>
 </html>

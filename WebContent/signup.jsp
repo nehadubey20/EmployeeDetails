@@ -14,19 +14,18 @@
 .emp-form
 {
 	margin: 1%;
-	padding: 2%;
+	padding: 1%;
 }
 
 .emp-form form
 {
 	/*width: 50%;*/
-	padding: 2%;
+	padding: 1%;
 	display: flex;
 	flex-direction: column;
-	align-self: center;
 	width: 30%;
 	height: auto;
-	float:left;
+ 	float:left; 
 	margin-right: 30px;
 }
 
@@ -34,10 +33,15 @@
 {
 	border-width: 3px;
 	height: 30px;
-	margin-bottom: 1%;
+ 	margin-bottom: 1%;
 	font-size: 15px;
 	border: groove;
-
+}
+.emp-form input radio
+{
+	display:flex;
+	flex-direction:row;
+	padding:10%;
 }
 
 .emp-form button
@@ -53,22 +57,45 @@
 <body>
 <div class="emp-form">
 
- 		<h1>Sign UP Form</h1>
+ 		<h3>Sign UP Form</h3>
 			<form action="SignUp" method="post">
-				<h3>Enter First Name:</h3>
+				<h4>Enter First Name:</h4>
 				<input type="text" name="fname" value="" placeholder="Enter First name"/><br>
-				<h3>Enter Last Name:</h3>
+				<h4>Enter Last Name:</h4>
 				<input type="text" name="lname" value="" placeholder="Enter Last name"/><br>
-				<h3>Enter E-mail:</h3>
+				<h4>Enter E-mail:</h4>
 				<input type="email" name="email" value="" placeholder="Enter Your E-mail"/><br>
-				<h3>Enter Phone:</h3>
+				<h4>Enter Phone:</h4>
 				<input type="tel" name="phone" value="" placeholder="Enter Your Phone Number"/><br>
-				<h3>Enter Password:</h3>
+				<h4>Enter Password:</h4>
 				<input type="password" name="password" value="" placeholder="Enter Your Password"/><br>
 				
-				<button>Sign Up</button><br>
-				<button>Reset</button>
+				<div class= radio>
 				
+				<h4>Select Gender</h4>
+				<input type="radio" name="gender" value="male">Male 
+				<input type="radio" name="gender" value="female">Female</br>
+				</br>
+				
+				<h4>Choose your city:</h4>
+					<select name="city" id="city">
+					  <option value="Indore">Indore</option>
+					  <option value="Bhopal">Bhopal</option>
+					  <option value="Dewas">Dewas</option>
+					  <option value="Pune">Pune</option>
+					</select></br>
+					
+				<h4>Select your device</h4>
+				<input type="checkbox" id="laptop" name="device[]" value="Laptop">
+				  <label for="Laptop"> I have a Laptop</label>
+				  <input type="checkbox" id="PC" name="device[]" value="PC">
+				  <label for="PC"> I have a PC</label>
+				  <input type="checkbox" id="Tablet" name="device[]" value="Tablet">
+				  <label for="Tablet"> I have a Tablet</label>	
+					
+				<button>Sign Up</button>
+				<button>Reset</button>
+				</div>
 			</form>
 		</div>
 

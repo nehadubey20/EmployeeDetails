@@ -18,13 +18,16 @@ public class Connector {
 		
 		Connection con=dbConnector.getConnection();
 		try {
-		String query = "Insert into signup(FirstName,LastName,Email,Phone,Password) values (?,?,?,?,?)";
+		String query = "Insert into signup(FirstName,LastName,Email,Phone,Password,Gender,City,Device) values (?,?,?,?,?,?,?,?)";
 		PreparedStatement stmt = con.prepareStatement(query);
 		stmt.setString(1,b.getFname());
 		stmt.setString(2,b.getLname());
 		stmt.setString(3,b.getEmail());
 		stmt.setString(4,b.getPhone());
 		stmt.setString(5,b.getPassword());
+		stmt.setString(6, b.getGender());
+		stmt.setString(7, b.getCity());
+		stmt.setString(8, b.getDevice());
 		int i = stmt.executeUpdate();
 		
 		if(i>0)
@@ -57,7 +60,8 @@ public class Connector {
 			b.setLname(rs.getString(3));
 			b.setEmail(rs.getString(4));
 			b.setPhone(rs.getString(5));
-		//	b.setPassword(rs.getString(6));
+			b.setGender(rs.getString(7));
+			b.setCity(rs.getString(8));
 			al.add(b);
 			
 		}

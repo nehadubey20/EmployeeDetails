@@ -35,6 +35,8 @@ text-decoration: none;
 	<th>Last Name</th>
 	<th>E-mail</th>
 	<th>Phone No</th>
+	<th>Gender</th>
+	<th>City</th>
 	<th>Action</th>
 </tr>
 <%  ArrayList arrlst = (ArrayList)getServletContext().getAttribute("showData");  %>
@@ -46,6 +48,8 @@ text-decoration: none;
 	<td><%=b1.getLname() %></td>
 	<td><%=b1.getEmail() %></td>
 	<td><%=b1.getPhone() %></td>
+	<td><%=b1.getGender() %></td>
+	<td><%=b1.getCity() %></td>
 	<td><a href="UpdateSignUp?user_id=<%=b1.getId()%>">Update</a> / 
 	<a href="DeleteSelected?user_id=<%=b1.getId()%>">Delete</a></td>
 </tr>

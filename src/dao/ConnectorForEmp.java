@@ -34,6 +34,9 @@ public class ConnectorForEmp {
 			b.setEmail(rs.getString(4));
 			b.setPhone(rs.getString(5));
 			b.setPassword(rs.getString(6));
+			b.setGender(rs.getString(7));
+			b.setCity(rs.getString(8));
+			b.setDevice(rs.getString(9));
 			al.add(b);
 			
 		}
@@ -52,14 +55,17 @@ public class ConnectorForEmp {
 		try
 		{
 			Connection con = dbConnector.getConnection();
-			String query = "update signup set FirstName=?,LastName=?,Email=?,Phone=?,Password=? where id=?";
+			String query = "update signup set FirstName=?,LastName=?,Email=?,Phone=?,Password=?,Gender=?,City=?,Device=? where id=?";
 			PreparedStatement stmt = con.prepareStatement(query);
 			stmt.setString(1,obj.getFname());
 			stmt.setString(2,obj.getLname());
 			stmt.setString(3,obj.getEmail());
 			stmt.setString(4,obj.getPhone());
 			stmt.setString(5,obj.getPassword());
-			stmt.setInt(6, obj.getId());
+			stmt.setNString(6, obj.getGender());
+			stmt.setString(7,obj.getCity());
+			stmt.setString(8,obj.getDevice());
+			stmt.setInt(9, obj.getId());
 			int i = stmt.executeUpdate();
 			if(i>0)
 			System.out.println("Update Successful!");
