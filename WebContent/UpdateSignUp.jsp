@@ -85,8 +85,31 @@
 				<input type="radio" value="Male" <%=str.equals("Male")?"checked":"" %> name="gender" >Male
 				<input type="radio" value="Female" <%=str.equals("Female")?"checked":"" %> name="gender" >Female</br>
 				</br>
-				<h4>Your city:</h4>
-				<input type="text" value="<%=sb.getCity()%>" name="city"/><br>
+				
+				
+				<h4>Choose your city:</h4>
+				
+					<select name="city" id="city">
+					<%String strr = sb.getCity(); %>
+				
+					  <option value="Indore"<%= strr.equalsIgnoreCase("Indore")?"selected":"" %>>Indore</option>
+					  <option value="Bhopal"<%= strr.equalsIgnoreCase("Bhopal")?"selected":"" %>>Bhopal</option>
+					  <option value="Dewas"<%= strr.equalsIgnoreCase("Dewas")?"selected":"" %>>Dewas</option>
+					  <option value="Pune"<%= strr.equalsIgnoreCase("Pune")?"selected":"" %>>Pune</option>
+					</select></br>
+				
+				
+				
+				<%-- <h4>Select your device</h4>
+				<%String st = sb.getDevice(); %>
+				<input type="checkbox" id="laptop" name="device[]" value="Laptop" <%=st.equals("Laptop")?"checked":""%>/>
+				  <label for="Laptop"> I have a laptop</label>
+				  <input type="checkbox" id="PC" name="device[]" value="PC"<%=st.equals("Laptop")?"checked":""%>/>
+				  <label for="PC"> I have a PC</label>
+				  <input type="checkbox" id="Tablet" name="device[]" value="Tablet" <%=st.equals("Laptop")?"checked":""%> />
+				  <label for="Tablet"> I have a Tablet</label>	
+				 --%>	
+				
 				
 				<button type="submit">Update</button>
 				<button type="reset">Reset</button>
