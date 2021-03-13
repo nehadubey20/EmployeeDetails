@@ -77,11 +77,9 @@ public class UpdateSignUp extends HttpServlet {
 		String city = request.getParameter("city");
 		
 		String device = request.getParameter("device");
-		String d[] = device.split(",");
+		//String d[] = device.split(",");
 		
-//		System.out.println(Arrays.toString(d));
-//		List devv = Arrays.asList(d);  
-//		
+		System.out.println(device);
 		
 		bs1.setId(sid);
 		bs1.setFname(fname);
@@ -91,7 +89,7 @@ public class UpdateSignUp extends HttpServlet {
 		bs1.setPassword(password);
 		bs1.setGender(gender);
 		bs1.setCity(city);
-		bs1.setDevice(d);
+		bs1.setDev(device);
 		
 		ConnectorForEmp.update(bs1);
 	

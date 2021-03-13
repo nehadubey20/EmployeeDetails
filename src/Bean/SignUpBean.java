@@ -10,7 +10,6 @@ public class SignUpBean {
 	String gender;
 	String city;
 	String dev;
-	
 	String device[];
 	
 	public String getDev() {

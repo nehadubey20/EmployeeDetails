@@ -73,8 +73,8 @@
 				<div class= radio>
 				
 				<h4>Select Gender</h4>
-				<input type="radio" name="gender" value="male">Male 
-				<input type="radio" name="gender" value="female">Female</br>
+				<input type="radio" name="gender" value="Male">Male 
+				<input type="radio" name="gender" value="Female">Female</br>
 				</br>
 				
 				<h4>Choose your city:</h4>
@@ -86,13 +86,13 @@
 					</select></br>
 					
 				<h4>Select your device</h4>
-				<input type="checkbox" id="laptop" name="device" value="Laptop">
+				<input type="checkbox" id="Laptop" name="device" value="Laptop">
 				  <label for="Laptop"> I have a Laptop</label><br>
 				  <input type="checkbox" id="PC" name="device" value="PC">
 				  <label for="PC"> I have a PC</label><br>
 				  <input type="checkbox" id="Tablet" name="device" value="Tablet">
 				  <label for="Tablet"> I have a Tablet</label><br>	
-				  <input type="checkbox" id="macbook" name="device" value="MacBook">
+				  <input type="checkbox" id="Macbook" name="device" value="MacBook">
 				  <label for="MacBook"> I have a MacBook</label><br>	
 				  		
 				<button>Sign Up</button>

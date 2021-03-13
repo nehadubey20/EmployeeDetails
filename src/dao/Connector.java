@@ -16,6 +16,8 @@ public class Connector {
 		//String fname,lname,email,phone,password;
 		//SignUpBean b = new SignUpBean();
 		
+		
+		
 		Connection con=dbConnector.getConnection();
 		try {
 		String query = "Insert into signup(FirstName,LastName,Email,Phone,Password,Gender,City,Device) values (?,?,?,?,?,?,?,?)";
@@ -28,8 +30,6 @@ public class Connector {
 		stmt.setString(6, b.getGender());
 		stmt.setString(7, b.getCity());
 		stmt.setString(8, b.getDev());
-		
-		System.out.println(b.getDev());
 		int i = stmt.executeUpdate();
 		
 		if(i>0)

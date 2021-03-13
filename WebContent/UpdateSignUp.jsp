@@ -1,3 +1,5 @@
+<%@page import="java.util.Arrays"%>
+<%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Bean.SignUpBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -57,6 +59,8 @@
 }
 </style>
 
+				
+
 </head>
 <body>
 <div class="emp-form">
@@ -100,17 +104,27 @@
 								
 				
 			 <h4>Select your device</h4>
-				<%String st[] = sb.getDevice(); 
-				%>
-				<input type="checkbox" id="laptop" name="device" value="Laptop" <%=st.equals("Laptop")?"checked":""%>/>
-				  <label for="Laptop"> I have a Laptop</label>
-				  <input type="checkbox" id="PC" name="device" value="PC"<%=st.equals("PC")?"checked":""%>/>
-				  <label for="PC"> I have a PC</label>
-				  <input type="checkbox" id="Tablet" name="device" value="Tablet" <%=st.equals("Tablet")?"checked":""%> />
-				  <label for="Tablet"> I have a Tablet</label>	
-			      <input type="checkbox" id="MacBook" name="device" value="MacBook" <%= st.equals("MacBook")?"checked":""%> />
-				  <label for="Tablet"> I have a MacBook</label>	
-			
+				<%String st = sb.getDev();%>
+				
+				<!-- 	String arr[]=st.split(",");
+					List list = Arrays.asList(arr);
+					ArrayList a = new ArrayList(list);
+					//System.out.println(st);
+					for(int i=0;i<arr.length;i++)
+					{
+						a.get(i);
+						System.out.println(a);
+				 -->
+				  
+				  <input type="checkbox" id="Laptop" name="device" value="Laptop" <%=st.indexOf("Laptop")!=-1?"checked":""%> />
+				  <label for="Laptop"> I have a laptop</label></br>			  
+				  <input type="checkbox" id="PC" name="device"  value="PC" <%=st.indexOf("PC")!=-1?"checked":""%>/>
+				  <label for="PC"> I have a PC</label></br>
+				  <input type="checkbox" id="Tablet" name="device" value="Tablet" <%=st.indexOf("Tablet")!=-1?"checked":""%> />
+				  <label for="Tablet"> I have a Tablet</label></br>	
+			      <input type="checkbox" id="MacBook" name="device" value="MacBook" <%=st.indexOf("MacBook")!=-1?"checked":""%> />
+				  <label for="MacBook"> I have a MacBook</label></br>
+	
 				<button type="submit">Update</button>
 				<button type="reset">Reset</button>
 				</div>	
