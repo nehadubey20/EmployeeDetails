@@ -2,6 +2,8 @@ package emp;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -74,6 +76,13 @@ public class UpdateSignUp extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String city = request.getParameter("city");
 		
+		String device = request.getParameter("device");
+		String d[] = device.split(",");
+		
+//		System.out.println(Arrays.toString(d));
+//		List devv = Arrays.asList(d);  
+//		
+		
 		bs1.setId(sid);
 		bs1.setFname(fname);
 		bs1.setLname(lname);
@@ -82,7 +91,7 @@ public class UpdateSignUp extends HttpServlet {
 		bs1.setPassword(password);
 		bs1.setGender(gender);
 		bs1.setCity(city);
-	
+		bs1.setDevice(d);
 		
 		ConnectorForEmp.update(bs1);
 	

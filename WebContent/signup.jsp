@@ -86,13 +86,15 @@
 					</select></br>
 					
 				<h4>Select your device</h4>
-				<input type="checkbox" id="laptop" name="device[]" value="Laptop">
-				  <label for="Laptop"> I have a Laptop</label>
-				  <input type="checkbox" id="PC" name="device[]" value="PC">
-				  <label for="PC"> I have a PC</label>
-				  <input type="checkbox" id="Tablet" name="device[]" value="Tablet">
-				  <label for="Tablet"> I have a Tablet</label>	
-					
+				<input type="checkbox" id="laptop" name="device" value="Laptop">
+				  <label for="Laptop"> I have a Laptop</label><br>
+				  <input type="checkbox" id="PC" name="device" value="PC">
+				  <label for="PC"> I have a PC</label><br>
+				  <input type="checkbox" id="Tablet" name="device" value="Tablet">
+				  <label for="Tablet"> I have a Tablet</label><br>	
+				  <input type="checkbox" id="macbook" name="device" value="MacBook">
+				  <label for="MacBook"> I have a MacBook</label><br>	
+				  		
 				<button>Sign Up</button>
 				<button>Reset</button>
 				</div>

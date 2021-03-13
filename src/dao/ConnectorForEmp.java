@@ -36,7 +36,7 @@ public class ConnectorForEmp {
 			b.setPassword(rs.getString(6));
 			b.setGender(rs.getString(7));
 			b.setCity(rs.getString(8));
-			b.setDevice(rs.getString(9));
+			//b.setDevice(rs.getString(9));
 			al.add(b);
 			
 		}
@@ -64,7 +64,7 @@ public class ConnectorForEmp {
 			stmt.setString(5,obj.getPassword());
 			stmt.setNString(6, obj.getGender());
 			stmt.setString(7,obj.getCity());
-			stmt.setString(8,obj.getDevice());
+			//stmt.setString(8,obj.getDevice());
 			stmt.setInt(9, obj.getId());
 			int i = stmt.executeUpdate();
 			if(i>0)

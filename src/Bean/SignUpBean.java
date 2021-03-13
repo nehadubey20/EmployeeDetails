@@ -9,14 +9,20 @@ public class SignUpBean {
 	String password;
 	String gender;
 	String city;
-	String device; 
+	String dev;
 	
+	String device[];
 	
-	
-	public String getDevice() {
+	public String getDev() {
+		return dev;
+	}
+	public void setDev(String dev) {
+		this.dev = dev;
+	}
+	public String[] getDevice() {
 		return device;
 	}
-	public void setDevice(String device) {
+	public void setDevice(String[] device) {
 		this.device = device;
 	}
 	public String getGender() {

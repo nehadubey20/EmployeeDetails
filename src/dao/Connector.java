@@ -27,7 +27,9 @@ public class Connector {
 		stmt.setString(5,b.getPassword());
 		stmt.setString(6, b.getGender());
 		stmt.setString(7, b.getCity());
-		stmt.setString(8, b.getDevice());
+		stmt.setString(8, b.getDev());
+		
+		System.out.println(b.getDev());
 		int i = stmt.executeUpdate();
 		
 		if(i>0)
@@ -62,6 +64,7 @@ public class Connector {
 			b.setPhone(rs.getString(5));
 			b.setGender(rs.getString(7));
 			b.setCity(rs.getString(8));
+			b.setDev(rs.getString(9));
 			al.add(b);
 			
 		}

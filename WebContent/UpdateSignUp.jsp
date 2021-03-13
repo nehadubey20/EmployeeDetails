@@ -97,20 +97,20 @@
 					  <option value="Dewas"<%= strr.equalsIgnoreCase("Dewas")?"selected":"" %>>Dewas</option>
 					  <option value="Pune"<%= strr.equalsIgnoreCase("Pune")?"selected":"" %>>Pune</option>
 					</select></br>
+								
 				
-				
-				
-				<%-- <h4>Select your device</h4>
-				<%String st = sb.getDevice(); %>
-				<input type="checkbox" id="laptop" name="device[]" value="Laptop" <%=st.equals("Laptop")?"checked":""%>/>
-				  <label for="Laptop"> I have a laptop</label>
-				  <input type="checkbox" id="PC" name="device[]" value="PC"<%=st.equals("Laptop")?"checked":""%>/>
+			 <h4>Select your device</h4>
+				<%String st[] = sb.getDevice(); 
+				%>
+				<input type="checkbox" id="laptop" name="device" value="Laptop" <%=st.equals("Laptop")?"checked":""%>/>
+				  <label for="Laptop"> I have a Laptop</label>
+				  <input type="checkbox" id="PC" name="device" value="PC"<%=st.equals("PC")?"checked":""%>/>
 				  <label for="PC"> I have a PC</label>
-				  <input type="checkbox" id="Tablet" name="device[]" value="Tablet" <%=st.equals("Laptop")?"checked":""%> />
+				  <input type="checkbox" id="Tablet" name="device" value="Tablet" <%=st.equals("Tablet")?"checked":""%> />
 				  <label for="Tablet"> I have a Tablet</label>	
-				 --%>	
-				
-				
+			      <input type="checkbox" id="MacBook" name="device" value="MacBook" <%= st.equals("MacBook")?"checked":""%> />
+				  <label for="Tablet"> I have a MacBook</label>	
+			
 				<button type="submit">Update</button>
 				<button type="reset">Reset</button>
 				</div>	
