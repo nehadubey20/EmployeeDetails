@@ -91,7 +91,7 @@
 					<select name="city" id="city">
 					<option value="0">Select Your City</option>
 					
-				<!-- 	  <option value="Indore">Indore</option>
+				<!-- <option value="Indore">Indore</option>
 					  <option value="Bhopal">Bhopal</option>
 					  <option value="Dewas">Dewas</option>
 					  <option value="Pune">Pune</option>  -->
