@@ -61,7 +61,7 @@ public class UpdateSignUp extends HttpServlet {
 		try
 		{
 			sid = Integer.parseInt(request.getParameter("user_id"));
-			System.out.println(sid);
+			System.out.println("ID for update : "+sid);
 
 		}
 		catch(Exception e)
@@ -76,10 +76,16 @@ public class UpdateSignUp extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String city = request.getParameter("city");
 		
-		String device = request.getParameter("device");
-		//String d[] = device.split(",");
+//		String device[] = request.getParameterValues("device");
+//		String d = String.split(",");
+		String device[]=request.getParameterValues("device");
+        String dev = String.join(",", device);
+        
+        
+        //bs1.setDev(dev);
+        System.out.println("devices Updated:"+dev);
 		
-		System.out.println(device);
+        
 		
 		bs1.setId(sid);
 		bs1.setFname(fname);
@@ -89,7 +95,7 @@ public class UpdateSignUp extends HttpServlet {
 		bs1.setPassword(password);
 		bs1.setGender(gender);
 		bs1.setCity(city);
-		bs1.setDev(device);
+		bs1.setDev(dev);
 		
 		ConnectorForEmp.update(bs1);
 	

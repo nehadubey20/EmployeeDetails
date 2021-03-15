@@ -9,7 +9,59 @@ import com.mysql.jdbc.Connection;
 import Bean.SignUpBean;
 
 public class ConnectorForEmp {
+	
+	
+	public static ArrayList showStates()
+	{
+		ArrayList s_al = new ArrayList();
+		Connection con = dbConnector.getConnection();
+		try {
+			String query = "select * from state";
+			PreparedStatement stmt=con.prepareStatement(query);
+			ResultSet rs = stmt.executeQuery();
+			while(rs.next())
+			{
+				s_al.add(rs.getString(2));
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return s_al;
+	}
 
+	public static ArrayList getCityByStateId(String stateid)
+	{
+		//SignUpBean sb = new SignUpBean();
+		Connection con = dbConnector.getConnection();
+		ArrayList al = new ArrayList();
+		try {
+		
+		String query = "Select City_Name from city where State_Id="+stateid;
+		PreparedStatement stmt = con.prepareStatement(query);
+		ResultSet rs = stmt.executeQuery();
+		while(rs.next())
+		{
+			//sb.setCity(rs.getString(1));
+			al.add(rs.getString(1));
+			//System.out.println(rs.getString(1));
+			
+		}
+		
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return al;
+	}
+	
+	
+	
+	
 	
 	public static ArrayList show(int id)
 	{
@@ -64,7 +116,15 @@ public class ConnectorForEmp {
 			stmt.setString(5,obj.getPassword());
 			stmt.setString(6, obj.getGender());
 			stmt.setString(7,obj.getCity());
-			stmt.setString(8,obj.getDev());
+			
+			String s = obj.getDev();
+			String d = String.join(",", s);
+			stmt.setString(8,d);
+			
+			
+			System.out.println(d);
+			
+			
 			stmt.setInt(9, obj.getId());
 			int i = stmt.executeUpdate();
 			if(i>0)

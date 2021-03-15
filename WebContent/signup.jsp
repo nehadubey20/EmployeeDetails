@@ -77,13 +77,26 @@
 				<input type="radio" name="gender" value="Female">Female</br>
 				</br>
 				
+				<h4>Choose your State:</h4>
+					<select name="city" id="state">
+					<option value="0">Select Your State</option>
+					  <option value="1">Madhya Pradesh</option>
+					  <option value="2">Maharashtra</option>
+					  <option value="3">Gujarat</option>
+					  <option value="4">Rajasthan</option>
+					  <option value="5">Tamil Nadu</option>  
+ 				</select></br></br>
+				
 				<h4>Choose your city:</h4>
 					<select name="city" id="city">
-					  <option value="Indore">Indore</option>
+					<option value="0">Select Your City</option>
+					
+				<!-- 	  <option value="Indore">Indore</option>
 					  <option value="Bhopal">Bhopal</option>
 					  <option value="Dewas">Dewas</option>
-					  <option value="Pune">Pune</option>
+					  <option value="Pune">Pune</option>  -->
 					</select></br>
+					</br>
 					
 				<h4>Select your device</h4>
 				<input type="checkbox" id="Laptop" name="device" value="Laptop">
@@ -102,4 +115,28 @@
 		</div>
 
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#state").change(function(){
+			var state = $(this).val();
+			
+			
+			$.ajax({
+				url:"SignUp",
+				data:{state_id:state},
+				success:function(res)
+				{
+					$("#city").html(res);
+				},
+				error:function(e)
+				{
+					alert("Error is:"+e);
+				}
+			});
+		});
+	});
+
+</script>
 </html>

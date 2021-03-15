@@ -47,7 +47,6 @@ public class Insert extends HttpServlet {
 		String phone = request.getParameter("phone");
 		
 		
-		
 		PrintWriter out = response.getWriter();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

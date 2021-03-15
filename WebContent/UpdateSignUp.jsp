@@ -105,16 +105,6 @@
 				
 			 <h4>Select your device</h4>
 				<%String st = sb.getDev();%>
-				
-				<!-- 	String arr[]=st.split(",");
-					List list = Arrays.asList(arr);
-					ArrayList a = new ArrayList(list);
-					//System.out.println(st);
-					for(int i=0;i<arr.length;i++)
-					{
-						a.get(i);
-						System.out.println(a);
-				 -->
 				  
 				  <input type="checkbox" id="Laptop" name="device" value="Laptop" <%=st.indexOf("Laptop")!=-1?"checked":""%> />
 				  <label for="Laptop"> I have a laptop</label></br>			  
@@ -124,7 +114,7 @@
 				  <label for="Tablet"> I have a Tablet</label></br>	
 			      <input type="checkbox" id="MacBook" name="device" value="MacBook" <%=st.indexOf("MacBook")!=-1?"checked":""%> />
 				  <label for="MacBook"> I have a MacBook</label></br>
-	
+			
 				<button type="submit">Update</button>
 				<button type="reset">Reset</button>
 				</div>	
