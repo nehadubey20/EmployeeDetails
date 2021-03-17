@@ -44,12 +44,16 @@ public class SignUp extends HttpServlet {
 		}
 		response.getWriter().append(city);
 		
+		
 		/*
-		 * String state = "<option value='0'>Select State</option>"; ArrayList s_al =
-		 * (ArrayList)ConnectorForEmp.showStates(); for(int i=0;i<s_al.size();i++) {
-		 * state += "<option value='"+s_al.get(i)+"'>"+al.get(i)+"</option>"; }
+		 * String state = "<option value='0'>Select State</option>"; ArrayList s_al
+		 * =(ArrayList)ConnectorForEmp.showStates(request.getParameter("state_id"));
+		 * 
+		 * for(int i=0;i<s_al.size();i++) { state +=
+		 * "<option value='"+s_al.get(i)+"'>"+al.get(i)+"</option>"; }
+		 * 
 		 * response.getWriter().append(state);
-		 */
+		 */		 
 	}
 
 	/**

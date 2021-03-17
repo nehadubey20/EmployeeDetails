@@ -11,7 +11,7 @@ import Bean.SignUpBean;
 public class ConnectorForEmp {
 	
 	
-	public static ArrayList showStates()
+	public static ArrayList showStates(String state)
 	{
 		ArrayList s_al = new ArrayList();
 		Connection con = dbConnector.getConnection();
@@ -21,6 +21,7 @@ public class ConnectorForEmp {
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next())
 			{
+				rs.getString(1);
 				s_al.add(rs.getString(2));
 			}
 		}
