@@ -79,7 +79,7 @@
 				</br>
 				
 				<h4>Choose your State:</h4>
-					<select name="city" id="state">
+					<select name="state" id="state">
 					<option value="0">Select Your State</option>
 					  
 					   <option value="1">Madhya Pradesh</option>
