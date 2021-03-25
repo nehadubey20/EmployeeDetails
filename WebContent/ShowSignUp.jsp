@@ -16,6 +16,7 @@ table{
 	border:solid;
 	border-width: 2%;
 	align-content: center;
+	margin-right: 2%
 }
 
 a{

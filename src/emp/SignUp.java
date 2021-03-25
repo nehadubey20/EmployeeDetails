@@ -34,7 +34,6 @@ public class SignUp extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		String city = "<option value='0'>Select City</option>";
 		ArrayList al = (ArrayList)ConnectorForEmp.getCityByStateId(request.getParameter("state_id"));
@@ -44,7 +43,7 @@ public class SignUp extends HttpServlet {
 		}
 		response.getWriter().append(city);
 		
-		
+
 		/*
 		 * String state = "<option value='0'>Select State</option>"; ArrayList s_al
 		 * =(ArrayList)ConnectorForEmp.showStates(request.getParameter("state_id"));
