@@ -78,8 +78,7 @@ public class SignUp extends HttpServlet {
         b.setDev(dev);
         System.out.println("devices of signupp:"+dev);
 		
-        //Connector.insert(b);
-		if(Connector.insert(b)==true)
+        if(Connector.insert(b)==true)
 		{
 			out.print("success!");
 		}
